@@ -65,31 +65,22 @@ let click = (color) => {
 
 // Função que retorna a cor
 let createColorElment = (color) => {
-    if (color == 0) {
-        return green;
-    }else if(color == 1) {
-        return red;
-    }else if(color == 2) {
-        return yellow;
-    }else {
-        return blue;
+    switch (color) {
+        case 0:
+            return green;
+            break;
+        case 1:
+            return red;
+            break;
+        case 2:
+            return yellow;
+            break;
+        case 3:
+            return blue;
+            break;
+        default:
+            break;
     }
-    // switch (color) {
-    //     case 0:
-    //         return green;
-    //         break;
-    //     case 1:
-    //         return red;
-    //         break;
-    //     case 2:
-    //         return yellow;
-    //         break;
-    //     case 3:
-    //         return blue;
-    //         break;
-    //     default:
-    //         break;
-    // }
 }
 
 // Função para próximo nível do jogo
@@ -114,11 +105,6 @@ let playGame = () => {
 
     nextLevel();
 }
-
-// green.addEventListener('click', click(0));
-// red.addEventListener('click', click(1));
-// yellow.addEventListener('click', click(2));
-// blue.addEventListener('click', click(3));
 
 // Eventos de click
 green.onclick = () => click(0);
